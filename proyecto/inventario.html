@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPRE - Inventario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor-app">
+        <aside class="barra-lateral">
+            <div class="encabezado-lateral">
+                <!-- AQUI VA LA IMAGEN: Logo pequeno para la barra lateral. -->
+                <img src="img/logo-edificio.png" alt="Logo" width="30"> SIPRE
+            </div>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="dashboard.html">Panel de control</a></li>
+                    <li><a href="inventario.html" class="activo">Inventario</a></li>
+                    <li><a href="prestamo.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="#">Configuracion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <div class="envoltura-principal">
+            <header class="barra-superior">
+                <div>SIPRE</div>
+                <div class="perfil-usuario">
+                    <span>Usuario: Alan Uriel</span>
+                    <!-- AQUI VA LA IMAGEN: Avatar del usuario. -->
+                    <img src="img/avatar.png" alt="Perfil" width="35" style="border-radius: 50%;">
+                </div>
+            </header>
+
+
+            <main class="contenido-principal">
+                <h2 class="titulo-pagina">Catalogo e Inventario de Materiales</h2>
+               
+                <section style="display: flex; gap: 20px; margin-bottom: 20px; max-width: 600px;">
+                    <div class="grupo-formulario" style="flex: 1;">
+                        <input type="text" id="buscar" class="campo-entrada" placeholder="Buscar por nombre o ID" style="margin: 0;">
+                    </div>
+                    <div class="grupo-formulario" style="flex: 1;">
+                        <select id="categoria" class="campo-entrada" style="margin: 0;">
+                            <option>Categoria ▼</option>
+                            <option>Electronica</option>
+                        </select>
+                    </div>
+                </section>
+
+
+                <section class="contenedor-tabla">
+                    <table class="tabla-datos">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nombre del articulo</th>
+                                <th>Categoria</th>
+                                <th>Disponibles</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10113</td>
+                                <td>
+                                    <!-- AQUI VA LA IMAGEN: Miniatura del articulo (ej. proyector). -->
+                                    <img src="img/mini-proyector.png" alt="Icono" width="20" style="vertical-align: middle; margin-right: 5px;">
+                                    Proyector
+                                </td>
+                                <td>Electronica</td>
+                                <td>5/15</td>
+                                <td>
+                                    <!-- AQUI VA LA IMAGEN: Icono de un ojo para ver detalles. -->
+                                    <img src="img/icono-ojo.png" alt="Ver" width="24" style="cursor: pointer;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10114</td>
+                                <td>
+                                    <!-- AQUI VA LA IMAGEN: Miniatura del articulo (ej. computadora). -->
+                                    <img src="img/mini-pc.png" alt="Icono" width="20" style="vertical-align: middle; margin-right: 5px;">
+                                    Computadora
+                                </td>
+                                <td>Electronica</td>
+                                <td>12/5</td>
+                                <td>
+                                    <!-- AQUI VA LA IMAGEN: Icono de un ojo para ver detalles. -->
+                                    <img src="img/icono-ojo.png" alt="Ver" width="24" style="cursor: pointer;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

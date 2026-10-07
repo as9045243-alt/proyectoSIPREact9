@@ -162,3 +162,55 @@ body {
     color: var(--alerta-texto);
 }
 
+/* ==========================================
+   VISTA 3: TABLA DE INVENTARIO
+   ========================================== */
+.contenedor-tabla {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    border: 2px solid var(--fondo-menta);
+    overflow: hidden;
+}
+
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+.tabla-datos th, .tabla-datos td {
+    padding: 15px;
+    border-bottom: 2px solid var(--fondo-menta);
+    border-right: 2px solid var(--fondo-menta);
+}
+
+
+.tabla-datos th:last-child, .tabla-datos td:last-child {
+    border-right: none;
+}
+
+
+.tabla-datos th {
+    background-color: var(--fondo-menta);
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+
+.tabla-datos tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   VISTAS 4 Y 5: PRÉSTAMOS Y DEVOLUCIONES
+   ========================================== */
+.disposicion-dividida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+

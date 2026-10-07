@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPRE - Registro de Prestamo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor-app">
+        <aside class="barra-lateral">
+            <div class="encabezado-lateral">
+                <!-- AQUI VA LA IMAGEN: Logo pequeno para la barra lateral. -->
+                <img src="img/logo-edificio.png" alt="Logo" width="30"> SIPRE
+            </div>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="dashboard.html">Panel de control</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li><a href="prestamo.html" class="activo">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="#">Configuracion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <div class="envoltura-principal">
+            <header class="barra-superior">
+                <div>SIPRE</div>
+                <div class="perfil-usuario">
+                    <span>Usuario: Alan Uriel</span>
+                    <!-- AQUI VA LA IMAGEN: Avatar del usuario. -->
+                    <img src="img/avatar.png" alt="Perfil" width="35" style="border-radius: 50%;">
+                </div>
+            </header>
+
+
+            <main class="contenido-principal">
+                <h2 class="titulo-pagina">Registro de prestamo</h2>
+               
+                <section class="disposicion-dividida">
+                    <form action="dashboard.html" method="GET">
+                        <div class="grupo-formulario">
+                            <label for="matricula" class="etiqueta-formulario">Ingrese su matricula</label>
+                            <input type="text" id="matricula" class="campo-entrada" placeholder="Folio o Matricula" required>
+                        </div>
+                       
+                        <div class="grupo-formulario">
+                            <label for="equipo" class="etiqueta-formulario">Equipo requerido</label>
+                            <select id="equipo" class="campo-entrada" required>
+                                <option value="">Seleccionar equipo ▼</option>
+                                <option value="proyector">Proyector Epson</option>
+                            </select>
+                        </div>
+                       
+                        <div class="grupo-formulario">
+                            <label for="fecha" class="etiqueta-formulario">Fecha de devolucion (dd/mm/aaaa)</label>
+                            <input type="date" id="fecha" class="campo-entrada" required>
+                        </div>
+                       
+                        <button type="submit" class="boton" style="margin-top: 10px;">Confirmar prestamo</button>
+                    </form>
+
+
+                    <aside style="text-align: center;">
+                        <p class="etiqueta-formulario" style="text-align: center; font-size: 1.1rem;">Nombre de articulo</p>
+                        <div style="background-color: var(--fondo-menta); height: 250px; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                            <!-- AQUI VA LA IMAGEN: Fotografia grande del articulo seleccionado. Idealmente un PNG sin fondo. -->
+                            <img src="img/placeholder-imagen.png" alt="Imagen del Articulo" width="100">
+                        </div>
+                        <div style="background-color: var(--fondo-menta); padding: 10px; border-radius: 5px; color: var(--color-principal);">
+                            Disponibles: 4/4
+                        </div>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
