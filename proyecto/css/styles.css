@@ -120,3 +120,45 @@ body {
     background-color: #0b5e54;
 }
 
+/* ==========================================
+   VISTA 2: TARJETAS MÉTRICAS (PANEL)
+   ========================================== */
+.cuadricula-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+
+.tarjeta-metrica {
+    background-color: var(--fondo-menta);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tarjeta-metrica h3 {
+    font-size: 1rem;
+    color: var(--color-principal);
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+
+.tarjeta-metrica .valor {
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+
+/* Tarjeta de alerta: Texto rojo, número rojo (según prototipo visual) */
+.tarjeta-metrica.alerta h3,
+.tarjeta-metrica.alerta .valor {
+    color: var(--alerta-texto);
+}
+
