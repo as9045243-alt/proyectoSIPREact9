@@ -1,2 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPRE - Panel de Control</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor-app">
+        <aside class="barra-lateral">
+            <div class="encabezado-lateral">
+                <!-- AQUI VA LA IMAGEN: Logo pequeno para la barra lateral. -->
+                <img src="img/logo-edificio.png" alt="Logo" width="30"> SIPRE
+            </div>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="dashboard.html" class="activo">Panel de control</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li><a href="prestamo.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="#">Configuracion</a></li>
+                </ul>
+            </nav>
+        </aside>
 
+
+        <div class="envoltura-principal">
+            <header class="barra-superior">
+                <div>SIPRE</div>
+                <div class="perfil-usuario">
+                    <span>Usuario: Alan Uriel</span>
+                    <!-- AQUI VA LA IMAGEN: Avatar del usuario logueado. Recortada en circulo por CSS. -->
+                    <img src="img/avatar.png" alt="Perfil" width="35" style="border-radius: 50%;">
+                </div>
+            </header>
+
+
+            <main class="contenido-principal">
+                <h2 class="titulo-pagina">PANEL DE CONTROL</h2>
+               
+                <section class="cuadricula-panel">
+                    <article class="tarjeta-metrica">
+                        <div>
+                            <h3>Total equipos en stock</h3>
+                            <p class="valor">523</p>
+                        </div>
+                        <!-- AQUI VA LA IMAGEN: Icono representativo de inventario o cajas. -->
+                        <img src="img/icono-caja.png" alt="Inventario" width="50">
+                    </article>
+                   
+                    <article class="tarjeta-metrica">
+                        <div>
+                            <h3>Prestamos activos</h3>
+                            <p class="valor">87</p>
+                        </div>
+                        <!-- AQUI VA LA IMAGEN: Icono representativo de prestamos o transferencia. -->
+                        <img src="img/icono-prestamo.png" alt="Prestamos" width="50">
+                    </article>
+                   
+                    <article class="tarjeta-metrica">
+                        <div>
+                            <h3>Nuevas solicitudes</h3>
+                            <p class="valor">5</p>
+                        </div>
+                        <!-- AQUI VA LA IMAGEN: Icono representativo de documentos o solicitudes nuevas. -->
+                        <img src="img/icono-documento.png" alt="Solicitudes" width="50">
+                    </article>
+                   
+                    <article class="tarjeta-metrica alerta">
+                        <div>
+                            <h3>Prestamos vencidos</h3>
+                            <p class="valor">12</p>
+                        </div>
+                        <!-- AQUI VA LA IMAGEN: Icono de alerta o reloj de arena. -->
+                        <img src="img/icono-alerta.png" alt="Advertencia" width="50">
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
 
