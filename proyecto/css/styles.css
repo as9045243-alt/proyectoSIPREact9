@@ -1,0 +1,122 @@
+:root {
+    
+    --color-principal: #107C70; /* Verde oscuro / para menús y textos */
+    --fondo-menta: #D0F2EB;     /* Verde menta claro para tarjetas e inputs */
+    --blanco: #FFFFFF;
+    --fondo-app: #F5F9F8;       /* Blanco/Gris muy tenue para el fondo general */
+    --alerta-texto: #E53935;    /* Rojo para el texto de "Préstamos vencidos" */
+    --hover-menu: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fondo-app);
+    color: var(--color-principal);
+}
+/* ==========================================
+   VISTA 1: INICIAR SESIÓN (LOGIN)
+   ========================================== */
+.encabezado-login {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.cuerpo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    background-color: var(--fondo-app);
+}
+
+
+.caja-login {
+    background-color: var(--fondo-menta);
+    padding: 50px 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    /* sombra para separar del fondo */
+    box-shadow: 0 10px 25px rgba(16, 124, 112, 0.1);
+}
+
+
+.caja-login h2 {
+    color: var(--color-principal);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   FORMULARIOS, INPUTS Y BOTONES GLOBALES
+   ========================================== */
+.grupo-formulario {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.etiqueta-formulario {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-principal);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.campo-entrada {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--fondo-menta);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: var(--color-principal);
+    font-size: 0.95rem;
+}
+
+
+/* Para inputs dentro de cajas que ya son menta (como el login) */
+.caja-login .campo-entrada {
+    background-color: rgba(255, 255, 255, 0.5); /* Contraste ligero */
+}
+
+
+.campo-entrada::placeholder {
+    color: rgba(16, 124, 112, 0.6);
+}
+
+
+.boton {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px; /* Forma de píldora del prototipo */
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 25px auto 0 auto; /* Centrado automático */
+    transition: background-color 0.3s;
+}
+
+
+.boton:hover {
+    background-color: #0b5e54;
+}
+

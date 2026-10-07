@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPRE - Iniciar Sesion</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="encabezado-login">
+        <!-- AQUI VA LA IMAGEN: Logo principal del sistema o de la universidad. Asegurate de que sea PNG transparente. -->
+        <img src="img/logo-edificio.png" alt="Logo SIPRE" width="40">
+        <h1>SIPRE</h1>
+    </header>
+
+    <main class="cuerpo-login">
+        <section class="caja-login">
+            <h2>Iniciar Sesion</h2>
+            
+            <form action="dashboard.html" method="GET">
+                <div class="grupo-formulario">
+                    <label for="usuario" class="etiqueta-formulario" style="display: none;">Matricula/Usuario</label>
+                    <input type="text" id="usuario" class="campo-entrada" placeholder="Matricula/Usuario" required>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="clave" class="etiqueta-formulario" style="display: none;">Contrasena</label>
+                    <input type="password" id="clave" class="campo-entrada" placeholder="Contrasena" required>
+                </div>
+                
+                <button type="submit" class="boton" style="margin-top: 10px; width: 150px;">Acceder</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
