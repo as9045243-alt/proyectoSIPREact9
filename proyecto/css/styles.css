@@ -1,6 +1,6 @@
 :root {
-    
-    --color-principal: #107C70; /* Verde oscuro / para menús y textos */
+    /* Paleta de colores extraída exactamente del prototipo */
+    --color-principal: #107C70; /* Verde oscuro / Teal para menús y textos */
     --fondo-menta: #D0F2EB;     /* Verde menta claro para tarjetas e inputs */
     --blanco: #FFFFFF;
     --fondo-app: #F5F9F8;       /* Blanco/Gris muy tenue para el fondo general */
@@ -19,6 +19,7 @@ body {
     background-color: var(--fondo-app);
     color: var(--color-principal);
 }
+
 /* ==========================================
    VISTA 1: INICIAR SESIÓN (LOGIN)
    ========================================== */
@@ -31,7 +32,6 @@ body {
     gap: 15px;
 }
 
-
 .cuerpo-login {
     display: flex;
     justify-content: center;
@@ -40,7 +40,6 @@ body {
     background-color: var(--fondo-app);
 }
 
-
 .caja-login {
     background-color: var(--fondo-menta);
     padding: 50px 40px;
@@ -48,10 +47,9 @@ body {
     width: 100%;
     max-width: 420px;
     text-align: center;
-    /* sombra para separar del fondo */
-    box-shadow: 0 10px 25px rgba(16, 124, 112, 0.1);
+    /* Ligera sombra para separar del fondo */
+    box-shadow: 0 10px 25px rgba(16, 124, 112, 0.1); 
 }
-
 
 .caja-login h2 {
     color: var(--color-principal);
@@ -59,7 +57,6 @@ body {
     margin-bottom: 30px;
     font-weight: 500;
 }
-
 
 /* ==========================================
    FORMULARIOS, INPUTS Y BOTONES GLOBALES
@@ -69,7 +66,6 @@ body {
     text-align: left;
 }
 
-
 .etiqueta-formulario {
     display: block;
     margin-bottom: 8px;
@@ -77,7 +73,6 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
 }
-
 
 .campo-entrada {
     width: 100%;
@@ -90,17 +85,14 @@ body {
     font-size: 0.95rem;
 }
 
-
 /* Para inputs dentro de cajas que ya son menta (como el login) */
 .caja-login .campo-entrada {
     background-color: rgba(255, 255, 255, 0.5); /* Contraste ligero */
 }
 
-
 .campo-entrada::placeholder {
     color: rgba(16, 124, 112, 0.6);
 }
-
 
 .boton {
     background-color: var(--color-principal);
@@ -115,9 +107,90 @@ body {
     transition: background-color 0.3s;
 }
 
-
 .boton:hover {
     background-color: #0b5e54;
+}
+
+/* ==========================================
+   LAYOUT PRINCIPAL (DASHBOARD Y VISTAS)
+   ========================================== */
+.contenedor-app {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Menú lateral ahora es verde oscuro según el prototipo */
+.barra-lateral {
+    width: 250px;
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado-lateral {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.menu-navegacion {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.menu-navegacion li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.menu-navegacion li a:hover, .menu-navegacion li a.activo {
+    background-color: var(--hover-menu);
+    border-left: 5px solid var(--fondo-menta);
+}
+
+.envoltura-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco); /* Fondo de contenido blanco */
+}
+
+.barra-superior {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.contenido-principal {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.titulo-pagina {
+    color: var(--color-principal);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase; /* Para que diga PANEL DE CONTROL */
 }
 
 /* ==========================================
@@ -129,7 +202,6 @@ body {
     gap: 30px;
 }
 
-
 .tarjeta-metrica {
     background-color: var(--fondo-menta);
     padding: 25px;
@@ -139,7 +211,6 @@ body {
     align-items: center;
 }
 
-
 .tarjeta-metrica h3 {
     font-size: 1rem;
     color: var(--color-principal);
@@ -148,16 +219,14 @@ body {
     line-height: 1.3;
 }
 
-
 .tarjeta-metrica .valor {
     font-size: 2.5rem;
     color: var(--color-principal);
     font-weight: 600;
 }
 
-
 /* Tarjeta de alerta: Texto rojo, número rojo (según prototipo visual) */
-.tarjeta-metrica.alerta h3,
+.tarjeta-metrica.alerta h3, 
 .tarjeta-metrica.alerta .valor {
     color: var(--alerta-texto);
 }
@@ -172,13 +241,11 @@ body {
     overflow: hidden;
 }
 
-
 .tabla-datos {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
-
 
 .tabla-datos th, .tabla-datos td {
     padding: 15px;
@@ -186,11 +253,9 @@ body {
     border-right: 2px solid var(--fondo-menta);
 }
 
-
 .tabla-datos th:last-child, .tabla-datos td:last-child {
     border-right: none;
 }
-
 
 .tabla-datos th {
     background-color: var(--fondo-menta);
@@ -198,11 +263,9 @@ body {
     font-weight: 600;
 }
 
-
 .tabla-datos tr:last-child td {
     border-bottom: none;
 }
-
 
 /* ==========================================
    VISTAS 4 Y 5: PRÉSTAMOS Y DEVOLUCIONES
@@ -213,4 +276,3 @@ body {
     gap: 50px;
     align-items: start;
 }
-
