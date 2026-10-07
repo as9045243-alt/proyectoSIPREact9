@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPRE - Devoluciones</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor-app">
+        <aside class="barra-lateral">
+            <div class="encabezado-lateral">
+                <!-- AQUI VA LA IMAGEN: Logo pequeno para la barra lateral. -->
+                <img src="img/logo-edificio.png" alt="Logo" width="30"> SIPRE
+            </div>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="dashboard.html">Panel de control</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li><a href="prestamo.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html" class="activo">Devoluciones</a></li>
+                    <li><a href="#">Configuracion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <div class="envoltura-principal">
+            <header class="barra-superior">
+                <div>SIPRE</div>
+                <div class="perfil-usuario">
+                    <span>Usuario: Alan Uriel</span>
+                    <!-- AQUI VA LA IMAGEN: Avatar del usuario. -->
+                    <img src="img/avatar.png" alt="Perfil" width="35" style="border-radius: 50%;">
+                </div>
+            </header>
+
+
+            <main class="contenido-principal">
+                <h2 class="titulo-pagina">Devoluciones</h2>
+               
+                <section class="disposicion-dividida">
+                    <form action="dashboard.html" method="GET">
+                        <div class="grupo-formulario">
+                            <label for="objeto" class="etiqueta-formulario">Objeto a devolver</label>
+                            <input type="text" id="objeto" class="campo-entrada" placeholder="Buscar por nombre o codigo">
+                        </div>
+                       
+                        <div class="grupo-formulario">
+                            <label for="comentarios" class="etiqueta-formulario">Comentarios adicionales</label>
+                            <input type="text" id="comentarios" class="campo-entrada" placeholder="Observaciones...">
+                        </div>
+                       
+                        <fieldset style="border: none; margin: 20px 0; display: flex; flex-direction: column; gap: 10px; color: var(--color-principal);">
+                            <legend style="display:none;">Estado de la devolucion</legend>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="estado" value="bueno"> Buen estado
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="estado" value="danado"> Danado
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="estado" value="incompleto"> Incompleto
+                            </label>
+                        </fieldset>
+
+
+                        <button type="submit" class="boton" style="width: 150px;">Confirmar</button>
+                    </form>
+
+
+                    <aside class="contenedor-tabla" style="background-color: transparent; box-shadow: none; padding: 0;">
+                        <h3 class="etiqueta-formulario" style="text-align: center; margin-bottom: 10px; font-size: 1.1rem;">Prestamos activos</h3>
+                        <table class="tabla-datos" style="background-color: var(--fondo-menta); border-radius: 10px; overflow: hidden;">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: var(--color-principal); color: var(--blanco);">Alumno</th>
+                                    <th style="background-color: var(--color-principal); color: var(--blanco);">Equipo</th>
+                                    <th style="background-color: var(--color-principal); color: var(--blanco);">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Juanito</td>
+                                    <td>Laptop</td>
+                                    <td>En proceso</td>
+                                </tr>
+                                <tr>
+                                    <td>Juancho</td>
+                                    <td>Mouse</td>
+                                    <td>Devuelto</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
